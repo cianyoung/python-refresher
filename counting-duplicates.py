@@ -26,3 +26,21 @@ def duplicate_count(text):
             print(f'\t"{element}" occurs {duplicates[element]} times.')
 
 duplicate_count(text)
+"""def duplicate_count(text):
+    
+    duplicates = {}
+    count = 0
+    
+    for character in text.lower():
+        
+        if character in duplicates:
+            duplicates[character] += 1
+            
+        else:
+            duplicates[character] = 1
+    
+    for character in duplicates:
+        if(duplicates[character] > 1):
+            count += 1
+    
+    return(count)"""
