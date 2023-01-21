@@ -7,18 +7,19 @@ The function should return true if the string is valid, and false if it's invali
 "(())((()())())"  =>  true
 """
 a = "(())((()())())"
+b = "()"
 
 def valid_parentheses(string):
     stack = []
     for char in string:
-        if char in '(':
-            stack.append(char)
-        elif char in ')':
-            if not stack or char == ')' and stack[-1] != '(':
+        if char in '()':
+            if char == '(' :
+                stack.append(char)
+            elif char == ')' and (not stack or stack[-1] != '('):
                 return False
-            stack.pop
-
+            else:
+                stack.pop()
     return not stack
 
-
-valid_parentheses(a)
+print(valid_parentheses(a))
+print(valid_parentheses(b))
