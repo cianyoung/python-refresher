@@ -19,7 +19,7 @@ def valid_parentheses(string):
                 return False
             else:
                 stack.pop()
-    return not stack
+    return not stack # return opposite boolean (empty data structure = True)
 
 print(valid_parentheses(a))
 print(valid_parentheses(b))
