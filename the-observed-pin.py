@@ -12,8 +12,9 @@ def get_pins(observed):
                   '8': ['5', '7', '8', '9', '0'],
                   '9': ['6', '8', '9'],
                   '0': ['0', '8']}
-    x = [neighbours [n] for n in observed]
-    print(x)
-    print(list(itertools.product(*x)))
+    x = [neighbours[n] for n in observed] # [] access value in dict, new_list = [expression for item in old_list]
+    xx = (list(itertools.product(*x)))
+    print(xx)
+    print([''.join(b) for b in xx])
 
-get_pins('11')
+get_pins('109')
